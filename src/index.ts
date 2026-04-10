@@ -5,6 +5,7 @@ import { OneCLI } from '@onecli-sh/sdk';
 
 import {
   ASSISTANT_NAME,
+  CONTROL_PLANE_URL,
   DEFAULT_TRIGGER,
   getTriggerPattern,
   GROUPS_DIR,
@@ -72,6 +73,7 @@ import { Channel, NewMessage, RegisteredGroup } from './types.js';
 import { logger } from './logger.js';
 import { runCodexExec } from './codex-runner.js';
 import { applySupportedEnvAliases } from './env.js';
+import { startControlPlaneWorker } from './control-plane-worker.js';
 
 // Re-export for backwards compatibility during refactor
 export { escapeXml, formatMessages } from './router.js';
@@ -872,6 +874,13 @@ async function main(): Promise<void> {
     logger.fatal({ err }, 'Message loop crashed unexpectedly');
     process.exit(1);
   });
+
+  if (CONTROL_PLANE_URL) {
+    logger.info('CONTROL_PLANE_URL set — starting embedded control-plane worker');
+    startControlPlaneWorker({ embedded: true }).catch((err) => {
+      logger.error({ err }, 'Control-plane worker failed');
+    });
+  }
 }
 
 // Guard: only run when executed directly, not when imported by tests

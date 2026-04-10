@@ -15,7 +15,7 @@ import { logger } from './logger.js';
 
 applySupportedEnvAliases();
 
-export async function startControlPlaneWorker(): Promise<void> {
+export async function startControlPlaneWorker(opts: { embedded?: boolean } = {}): Promise<void> {
   if (!CONTROL_PLANE_URL) {
     throw new Error('CONTROL_PLANE_URL is required');
   }
@@ -23,9 +23,11 @@ export async function startControlPlaneWorker(): Promise<void> {
     throw new Error('AGENT_KEY is required');
   }
 
-  ensureContainerRuntimeRunning();
-  cleanupOrphans();
-  initDatabase();
+  if (!opts.embedded) {
+    ensureContainerRuntimeRunning();
+    cleanupOrphans();
+    initDatabase();
+  }
 
   const client = new ControlPlaneClient({
     baseUrl: CONTROL_PLANE_URL,
@@ -42,13 +44,15 @@ export async function startControlPlaneWorker(): Promise<void> {
       : undefined,
   });
 
-  const shutdown = (signal: string) => {
-    logger.info({ signal }, 'Stopping control-plane worker');
-    runner.stop();
-    process.exit(0);
-  };
-  process.on('SIGTERM', () => shutdown('SIGTERM'));
-  process.on('SIGINT', () => shutdown('SIGINT'));
+  if (!opts.embedded) {
+    const shutdown = (signal: string) => {
+      logger.info({ signal }, 'Stopping control-plane worker');
+      runner.stop();
+      process.exit(0);
+    };
+    process.on('SIGTERM', () => shutdown('SIGTERM'));
+    process.on('SIGINT', () => shutdown('SIGINT'));
+  }
 
   await runner.start();
 }
