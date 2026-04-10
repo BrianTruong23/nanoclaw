@@ -1,9 +1,6 @@
 process.env.NANOCLAW_PROCESS_ROLE ??= 'control-plane-worker';
 
-import {
-  AGENT_KEY,
-  CONTROL_PLANE_URL,
-} from './config.js';
+import { AGENT_KEY, CONTROL_PLANE_URL } from './config.js';
 import { ControlPlaneClient } from './control-plane-client.js';
 import { createControlPlaneRunner } from './control-plane-runner.js';
 import {
