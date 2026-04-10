@@ -92,7 +92,8 @@ let messageLoopRunning = false;
 
 const channels: Channel[] = [];
 const queue = new GroupQueue();
-let controlPlaneRunner: ReturnType<typeof createControlPlaneRunner> | null = null;
+let controlPlaneRunner: ReturnType<typeof createControlPlaneRunner> | null =
+  null;
 
 const onecli = new OneCLI({ url: ONECLI_URL });
 
