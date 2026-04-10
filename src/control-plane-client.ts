@@ -65,9 +65,7 @@ export class ControlPlaneClient {
   }
 
   async getMessages(taskId?: string): Promise<any[]> {
-    const search = taskId
-      ? `?taskId=${encodeURIComponent(taskId)}`
-      : '';
+    const search = taskId ? `?taskId=${encodeURIComponent(taskId)}` : '';
     const result = await this.request('GET', `/api/agent/messages${search}`);
     if (Array.isArray(result)) return result;
     if (Array.isArray(result?.messages)) return result.messages;

@@ -82,7 +82,11 @@ export async function executeControlPlaneTask(
   const useGroupContext = CONTROL_PLANE_CONTEXT_MODE === 'group';
   const sessionId = useGroupContext ? getSession(group.folder) : undefined;
 
-  writeCurrentSnapshots(group.folder, isMain, Object.keys(getAllRegisteredGroups()));
+  writeCurrentSnapshots(
+    group.folder,
+    isMain,
+    Object.keys(getAllRegisteredGroups()),
+  );
 
   const output = await runContainerAgent(
     group,

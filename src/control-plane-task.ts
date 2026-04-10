@@ -17,8 +17,7 @@ export function normalizeControlPlaneTask(
   if (!id) return null;
 
   const status = (pickString(record, ['status']) || '').trim().toLowerCase();
-  const title =
-    pickString(record, ['title', 'name', 'summary']) || undefined;
+  const title = pickString(record, ['title', 'name', 'summary']) || undefined;
   const displayId =
     pickString(record, ['taskNumber', 'identifier', 'slug']) || id;
 

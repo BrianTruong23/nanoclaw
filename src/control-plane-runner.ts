@@ -42,8 +42,7 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
   const heartbeatIntervalMs =
     deps.heartbeatIntervalMs || CONTROL_PLANE_HEARTBEAT_INTERVAL_MS;
   const pollIntervalMs = deps.pollIntervalMs || CONTROL_PLANE_POLL_INTERVAL_MS;
-  const includeBacklog =
-    deps.includeBacklog ?? CONTROL_PLANE_INCLUDE_BACKLOG;
+  const includeBacklog = deps.includeBacklog ?? CONTROL_PLANE_INCLUDE_BACKLOG;
   const successStatus = deps.successStatus || CONTROL_PLANE_SUCCESS_STATUS;
   const failureStatus = deps.failureStatus ?? CONTROL_PLANE_FAILURE_STATUS;
 
@@ -105,7 +104,8 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
         .map((task) => normalizeControlPlaneTask(task))
         .filter((task): task is NormalizedControlPlaneTask => !!task);
       const nextTask = normalizedTasks.find(
-        (task) => isBacklogTask(task) && !wasRecentlyHandled(task.id, recentlyHandled),
+        (task) =>
+          isBacklogTask(task) && !wasRecentlyHandled(task.id, recentlyHandled),
       );
 
       if (!nextTask) return;
@@ -193,9 +193,7 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
       logger.info(
         {
           identity:
-            lastBootstrap?.agent?.name ||
-            lastBootstrap?.agent?.id ||
-            'unknown',
+            lastBootstrap?.agent?.name || lastBootstrap?.agent?.id || 'unknown',
         },
         'Control-plane bootstrap complete',
       );
