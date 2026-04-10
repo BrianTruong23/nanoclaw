@@ -32,6 +32,7 @@ export interface ControlPlaneRunnerDeps {
   includeBacklog?: boolean;
   successStatus?: string;
   failureStatus?: string;
+  notifyLocalMessage?: (message: string) => Promise<void>;
 }
 
 export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
@@ -45,6 +46,7 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
   const includeBacklog = deps.includeBacklog ?? CONTROL_PLANE_INCLUDE_BACKLOG;
   const successStatus = deps.successStatus || CONTROL_PLANE_SUCCESS_STATUS;
   const failureStatus = deps.failureStatus ?? CONTROL_PLANE_FAILURE_STATUS;
+  const notifyLocalMessage = deps.notifyLocalMessage;
 
   if (!client) {
     throw new Error('ControlPlaneRunner requires a control-plane client');
@@ -120,6 +122,10 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
           status: 'in-progress',
           message: `Picked up ${nextTask.displayId} and starting work.`,
         });
+        await safeNotifyLocal(
+          notifyLocalMessage,
+          `Starting ${nextTask.displayId} from the control plane.`,
+        );
         await client.postMessage({
           taskId: nextTask.id,
           body: `NanoClaw picked up ${nextTask.displayId} in local group "${selection.group.folder}" and is starting work.`,
@@ -147,6 +153,7 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
             taskId: nextTask.id,
             body: failureMessage,
           });
+          await safeNotifyLocal(notifyLocalMessage, failureMessage);
           if (failureStatus) {
             await client.updateTask(nextTask.id, {
               status: failureStatus,
@@ -165,6 +172,10 @@ export function createControlPlaneRunner(deps: ControlPlaneRunnerDeps) {
             body: completionMessage,
           });
         }
+        await safeNotifyLocal(
+          notifyLocalMessage,
+          `Completed ${nextTask.displayId}.\n\n${completionMessage}`,
+        );
         await client.updateTask(nextTask.id, {
           status: successStatus,
           message: `NanoClaw completed ${nextTask.displayId} and marked it ${successStatus}.`,
@@ -244,4 +255,16 @@ function normalizeMessageBody(value: string | null): string | null {
   const trimmed = value.trim();
   if (!trimmed) return null;
   return trimmed.slice(0, 8000);
+}
+
+async function safeNotifyLocal(
+  notifyLocalMessage: ((message: string) => Promise<void>) | undefined,
+  message: string,
+): Promise<void> {
+  if (!notifyLocalMessage) return;
+  try {
+    await notifyLocalMessage(message);
+  } catch (err) {
+    logger.warn({ err }, 'Failed to send local control-plane notification');
+  }
 }

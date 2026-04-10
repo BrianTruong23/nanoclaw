@@ -36,6 +36,7 @@ describe('control-plane runner', () => {
     const runner = createControlPlaneRunner({
       client,
       executeTask: executeTask as any,
+      notifyLocalMessage: vi.fn(async () => {}),
       resolveGroup: (() => ({
         jid: 'tg:main',
         group: {
@@ -89,6 +90,7 @@ describe('control-plane runner', () => {
       updateTask: vi.fn(async () => ({})),
       postMessage: vi.fn(async () => ({})),
     };
+    const notifyLocalMessage = vi.fn(async () => {});
     const runner = createControlPlaneRunner({
       client,
       executeTask: (async () => ({
@@ -96,6 +98,7 @@ describe('control-plane runner', () => {
         result: null,
         error: 'container failed',
       })) as any,
+      notifyLocalMessage,
       resolveGroup: (() => ({
         jid: 'tg:main',
         group: {
@@ -120,5 +123,8 @@ describe('control-plane runner', () => {
       message:
         'NanoClaw failed while processing task-backlog: container failed',
     });
+    expect(notifyLocalMessage).toHaveBeenCalledWith(
+      'NanoClaw failed while processing task-backlog: container failed',
+    );
   });
 });

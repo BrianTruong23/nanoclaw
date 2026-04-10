@@ -2,6 +2,8 @@ process.env.NANOCLAW_PROCESS_ROLE ??= 'control-plane-worker';
 
 import { AGENT_KEY, CONTROL_PLANE_URL } from './config.js';
 import { ControlPlaneClient } from './control-plane-client.js';
+import { resolveControlPlaneGroup } from './control-plane-executor.js';
+import { createTelegramControlPlaneNotifier } from './control-plane-notifier.js';
 import { createControlPlaneRunner } from './control-plane-runner.js';
 import {
   cleanupOrphans,
@@ -29,8 +31,16 @@ export async function startControlPlaneWorker(): Promise<void> {
     baseUrl: CONTROL_PLANE_URL,
     agentKey: AGENT_KEY,
   });
+  const selection = resolveControlPlaneWorkerGroup();
+  const notifier = createTelegramControlPlaneNotifier(selection.jid);
 
-  const runner = createControlPlaneRunner({ client });
+  const runner = createControlPlaneRunner({
+    client,
+    resolveGroup: () => selection,
+    notifyLocalMessage: notifier
+      ? async (message) => notifier.send(message)
+      : undefined,
+  });
 
   const shutdown = (signal: string) => {
     logger.info({ signal }, 'Stopping control-plane worker');
@@ -41,6 +51,10 @@ export async function startControlPlaneWorker(): Promise<void> {
   process.on('SIGINT', () => shutdown('SIGINT'));
 
   await runner.start();
+}
+
+function resolveControlPlaneWorkerGroup() {
+  return resolveControlPlaneGroup();
 }
 
 const isDirectRun =
