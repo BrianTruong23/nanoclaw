@@ -16,6 +16,7 @@ interface ContainerInput {
   chatJid: string;
   isMain: boolean;
   isScheduledTask?: boolean;
+  closeAfterFirstResult?: boolean;
   assistantName?: string;
   script?: string;
 }
@@ -485,6 +486,12 @@ async function main(): Promise<void> {
         result: reply,
         newSessionId: session.id,
       });
+
+      if (containerInput.closeAfterFirstResult) {
+        log('Single-turn mode enabled, archiving conversation and exiting');
+        archiveConversation(session, containerInput.assistantName);
+        break;
+      }
 
       const nextMessage = await waitForIpcMessage();
       if (nextMessage === null) {

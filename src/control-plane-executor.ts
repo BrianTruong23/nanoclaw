@@ -96,6 +96,7 @@ export async function executeControlPlaneTask(
       groupFolder: group.folder,
       chatJid: `control-plane:${options.taskId}`,
       isMain,
+      closeAfterFirstResult: true,
       assistantName: ASSISTANT_NAME,
     },
     () => {},
