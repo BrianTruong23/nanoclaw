@@ -103,6 +103,7 @@ NanoClaw can also run as an automatic polling worker for an external control-pla
 - claims assigned `backlog` tasks
 - runs the task through NanoClaw's existing container execution path
 - posts task-scoped updates and marks the task `review` by default when complete
+- reports start/failure/completion back to the selected local Telegram chat when `CONTROL_PLANE_GROUP_FOLDER` points at a Telegram-backed NanoClaw group
 
 ### Required env
 
@@ -130,6 +131,7 @@ Notes:
 - `CONTROL_PLANE_GROUP_FOLDER` chooses which local NanoClaw group runs control-plane tasks. If omitted, NanoClaw uses the main group when one exists, otherwise the only registered group.
 - `CONTROL_PLANE_CONTEXT_MODE=group` reuses the selected group's saved Claude session between tasks. Use `isolated` if every control-plane task should start fresh.
 - `CONTROL_PLANE_FAILURE_STATUS` is optional. If unset, the worker posts a failure message but does not force a task status change on execution failure.
+- Telegram reporting uses the selected local group's JID. If that group is a Telegram chat and your bot token is configured, the worker sends start/failure/completion updates back to that Telegram chat automatically.
 
 ### Start the worker
 
