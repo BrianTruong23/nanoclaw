@@ -1,0 +1,808 @@
+{"at":"2026-04-10T03:27:52.717Z","pid":96249,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-unPFvh/sender-allowlist.json"}}
+{"at":"2026-04-10T03:27:52.718Z","pid":96249,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-WUQrJG/sender-allowlist.json"}}
+{"at":"2026-04-10T03:27:52.718Z","pid":96249,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-pfFYER/sender-allowlist.json"}}
+{"at":"2026-04-10T03:27:52.719Z","pid":96249,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-XybWFS/sender-allowlist.json"}}
+{"at":"2026-04-10T03:27:52.751Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672751-yqg48e","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.752Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672752-yyg808","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.753Z","pid":96247,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:27:52.754Z","pid":96247,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:27:52.755Z","pid":96247,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:27:52.755Z","pid":96247,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.756Z","pid":96247,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.757Z","pid":96247,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:27:52.758Z","pid":96247,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.759Z","pid":96247,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:27:52.760Z","pid":96247,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:27:52.761Z","pid":96247,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.762Z","pid":96247,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.764Z","pid":96247,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.765Z","pid":96247,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:27:52.765Z","pid":96250,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:27:52.767Z","pid":96247,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:27:52.765Z","pid":96250,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:27:52.765Z","pid":96250,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:27:52.776Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672775-4nwbkm","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.778Z","pid":96247,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:27:52.779Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672779-p5mw6z","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.781Z","pid":96247,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:27:52.782Z","pid":96247,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:27:52.783Z","pid":96247,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:27:52.784Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672784-9envb7","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:27:52.785Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672785-ky5l1r","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.786Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672786-sg9c0e","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.787Z","pid":96247,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775791672787-i1eg0t","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:27:52.788Z","pid":96247,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:28:09.977Z","pid":96690,"level":"fatal","role":"dashboard","msg":"Uncaught exception","data":{"err":{"code":"EPERM","errno":-1,"syscall":"listen","address":"127.0.0.1","port":4780}}}
+{"at":"2026-04-10T03:31:40.322Z","pid":96927,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T03:31:55.891Z","pid":96937,"level":"error","role":"agent","msg":"Failed to reach container runtime","data":{"err":{"status":127,"signal":null,"output":[null,{"type":"Buffer","data":[]},{"type":"Buffer","data":[47,98,105,110,47,115,104,58,32,100,111,99,107,101,114,58,32,99,111,109,109,97,110,100,32,110,111,116,32,102,111,117,110,100,10]}],"pid":96938,"stdout":{"type":"Buffer","data":[]},"stderr":{"type":"Buffer","data":[47,98,105,110,47,115,104,58,32,100,111,99,107,101,114,58,32,99,111,109,109,97,110,100,32,110,111,116,32,102,111,117,110,100,10]}}}}
+{"at":"2026-04-10T03:31:55.900Z","pid":96937,"level":"error","role":"agent","msg":"Failed to start NanoClaw","data":{"err":{}}}
+{"at":"2026-04-10T03:33:24.837Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:33:29.837Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:33:39.837Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:33:24.841Z","pid":97108,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:33:24.842Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:33:29.842Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:33:39.842Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:33:59.842Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:34:39.842Z","pid":97108,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:35:59.842Z","pid":97108,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:33:24.849Z","pid":97112,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-xZBDrB/sender-allowlist.json"}}
+{"at":"2026-04-10T03:33:24.850Z","pid":97112,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-91Jvhx/sender-allowlist.json"}}
+{"at":"2026-04-10T03:33:24.851Z","pid":97112,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-LqGgKb/sender-allowlist.json"}}
+{"at":"2026-04-10T03:33:24.852Z","pid":97112,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-tjvIP5/sender-allowlist.json"}}
+{"at":"2026-04-10T03:33:24.894Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004894-mj48eb","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.896Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004896-zqsad1","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.898Z","pid":97102,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:33:24.899Z","pid":97102,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:33:24.901Z","pid":97102,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:33:24.902Z","pid":97102,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.903Z","pid":97102,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.902Z","pid":97110,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:33:24.902Z","pid":97110,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:33:24.904Z","pid":97102,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:33:24.902Z","pid":97110,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:33:24.905Z","pid":97102,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.906Z","pid":97102,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:33:24.908Z","pid":97102,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:33:24.909Z","pid":97102,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.910Z","pid":97102,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.912Z","pid":97102,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.914Z","pid":97102,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:33:24.915Z","pid":97102,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:33:24.923Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004923-2afpbo","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.924Z","pid":97102,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:33:24.925Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004925-7nqbtv","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.926Z","pid":97102,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:33:24.927Z","pid":97102,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:33:24.928Z","pid":97102,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:33:24.929Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004929-s0mpe1","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:33:24.930Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004930-u0pojc","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.931Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004931-9phlq5","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.932Z","pid":97102,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792004932-oc7qfp","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:33:24.935Z","pid":97102,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:38:57.319Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:39:02.319Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:39:12.319Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:38:57.326Z","pid":98210,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:38:57.328Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:39:02.328Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:39:12.328Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:39:32.328Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:40:12.328Z","pid":98210,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:41:32.328Z","pid":98210,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:38:57.368Z","pid":98213,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-hq5Hgp/sender-allowlist.json"}}
+{"at":"2026-04-10T03:38:57.370Z","pid":98213,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-M3ClHf/sender-allowlist.json"}}
+{"at":"2026-04-10T03:38:57.371Z","pid":98213,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-YhzFia/sender-allowlist.json"}}
+{"at":"2026-04-10T03:38:57.372Z","pid":98213,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-EdLrcm/sender-allowlist.json"}}
+{"at":"2026-04-10T03:38:57.483Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337483-k1ve4t","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.485Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337485-f6c8xc","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.486Z","pid":98204,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:38:57.487Z","pid":98204,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:38:57.488Z","pid":98204,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:38:57.489Z","pid":98204,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.490Z","pid":98204,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.488Z","pid":98212,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:38:57.490Z","pid":98204,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:38:57.488Z","pid":98212,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:38:57.491Z","pid":98204,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.488Z","pid":98212,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:38:57.492Z","pid":98204,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:38:57.492Z","pid":98204,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:38:57.493Z","pid":98204,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.493Z","pid":98204,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.495Z","pid":98204,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.497Z","pid":98204,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:38:57.498Z","pid":98204,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:38:57.507Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337507-ol5iyo","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.509Z","pid":98204,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:38:57.511Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337511-oytowx","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.512Z","pid":98204,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:38:57.514Z","pid":98204,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:38:57.515Z","pid":98204,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:38:57.516Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337516-65u61p","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:38:57.517Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337517-jvcs2m","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.518Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337518-ayseuw","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.518Z","pid":98204,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792337518-0yer93","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:38:57.520Z","pid":98204,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:41:09.698Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:41:14.698Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:41:24.698Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:41:09.701Z","pid":98779,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:41:09.702Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:41:14.702Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:41:24.702Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:41:44.702Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:42:24.702Z","pid":98779,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:43:44.702Z","pid":98779,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:41:09.718Z","pid":98783,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-tFCeNn/sender-allowlist.json"}}
+{"at":"2026-04-10T03:41:09.718Z","pid":98783,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-DjkLoc/sender-allowlist.json"}}
+{"at":"2026-04-10T03:41:09.719Z","pid":98783,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-TVx5G4/sender-allowlist.json"}}
+{"at":"2026-04-10T03:41:09.720Z","pid":98783,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-egPUZw/sender-allowlist.json"}}
+{"at":"2026-04-10T03:41:09.751Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469751-1zvtcg","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.753Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469753-rtlz11","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.754Z","pid":98777,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:41:09.754Z","pid":98777,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:41:09.754Z","pid":98785,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:41:09.756Z","pid":98777,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:41:09.754Z","pid":98785,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:41:09.754Z","pid":98785,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:41:09.756Z","pid":98777,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.757Z","pid":98777,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.758Z","pid":98777,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:41:09.758Z","pid":98777,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.759Z","pid":98777,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:41:09.760Z","pid":98777,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:41:09.760Z","pid":98777,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.761Z","pid":98777,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.761Z","pid":98777,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.762Z","pid":98777,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:41:09.762Z","pid":98777,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:41:09.767Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469767-0s600p","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.768Z","pid":98777,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:41:09.769Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469769-i9c3ku","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.769Z","pid":98777,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:41:09.770Z","pid":98777,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:41:09.770Z","pid":98777,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:41:09.771Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469770-5b37ml","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:41:09.771Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469771-u99wwx","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.771Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469771-qbuvrn","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.772Z","pid":98777,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792469772-lxfq4w","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:41:09.774Z","pid":98777,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:42:13.658Z","pid":98888,"level":"error","role":"agent","msg":"Failed to reach container runtime","data":{"err":{"status":127,"signal":null,"output":[null,{"type":"Buffer","data":[]},{"type":"Buffer","data":[47,98,105,110,47,115,104,58,32,100,111,99,107,101,114,58,32,99,111,109,109,97,110,100,32,110,111,116,32,102,111,117,110,100,10]}],"pid":98889,"stdout":{"type":"Buffer","data":[]},"stderr":{"type":"Buffer","data":[47,98,105,110,47,115,104,58,32,100,111,99,107,101,114,58,32,99,111,109,109,97,110,100,32,110,111,116,32,102,111,117,110,100,10]}}}}
+{"at":"2026-04-10T03:42:13.660Z","pid":98888,"level":"error","role":"agent","msg":"Failed to start NanoClaw","data":{"err":{}}}
+{"at":"2026-04-10T03:42:18.875Z","pid":98899,"level":"error","role":"agent","msg":"Failed to reach container runtime","data":{"err":{"status":127,"signal":null,"output":[null,{"type":"Buffer","data":[]},{"type":"Buffer","data":[47,98,105,110,47,115,104,58,32,100,111,99,107,101,114,58,32,99,111,109,109,97,110,100,32,110,111,116,32,102,111,117,110,100,10]}],"pid":98900,"stdout":{"type":"Buffer","data":[]},"stderr":{"type":"Buffer","data":[47,98,105,110,47,115,104,58,32,100,111,99,107,101,114,58,32,99,111,109,109,97,110,100,32,110,111,116,32,102,111,117,110,100,10]}}}}
+{"at":"2026-04-10T03:42:18.876Z","pid":98899,"level":"error","role":"agent","msg":"Failed to start NanoClaw","data":{"err":{}}}
+{"at":"2026-04-10T03:45:53.748Z","pid":99545,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T03:45:53.749Z","pid":99545,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":0}}
+{"at":"2026-04-10T03:45:53.750Z","pid":99545,"level":"fatal","role":"agent","msg":"No channels connected"}
+{"at":"2026-04-10T03:46:47.354Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:46:52.354Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:47:02.354Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:46:47.359Z","pid":99739,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:46:47.360Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:46:52.360Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:47:02.360Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:47:22.360Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:48:02.360Z","pid":99739,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:49:22.360Z","pid":99739,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:46:47.395Z","pid":99741,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-nebVow/sender-allowlist.json"}}
+{"at":"2026-04-10T03:46:47.397Z","pid":99741,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-V6sedt/sender-allowlist.json"}}
+{"at":"2026-04-10T03:46:47.399Z","pid":99741,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-CF8m1W/sender-allowlist.json"}}
+{"at":"2026-04-10T03:46:47.402Z","pid":99741,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-XrfMii/sender-allowlist.json"}}
+{"at":"2026-04-10T03:46:47.478Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807477-pxfwlj","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.480Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807480-mr3k1h","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.481Z","pid":99736,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:46:47.483Z","pid":99736,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:46:47.485Z","pid":99736,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:46:47.486Z","pid":99736,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.489Z","pid":99736,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.491Z","pid":99736,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:46:47.492Z","pid":99736,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.493Z","pid":99736,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:46:47.492Z","pid":99742,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:46:47.492Z","pid":99742,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:46:47.492Z","pid":99742,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:46:47.495Z","pid":99736,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:46:47.496Z","pid":99736,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.497Z","pid":99736,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.499Z","pid":99736,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.500Z","pid":99736,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:46:47.502Z","pid":99736,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:46:47.512Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807511-escu8b","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.514Z","pid":99736,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:46:47.515Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807515-vlr313","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.517Z","pid":99736,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:46:47.519Z","pid":99736,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:46:47.520Z","pid":99736,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:46:47.522Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807522-vqqxts","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:46:47.523Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807523-p4fps4","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.525Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807525-oblkhk","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.526Z","pid":99736,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775792807526-2xzzcm","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:46:47.528Z","pid":99736,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:47:19.052Z","pid":99842,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T03:47:25.377Z","pid":99850,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T03:47:25.378Z","pid":99850,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":0}}
+{"at":"2026-04-10T03:47:27.589Z","pid":99850,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T03:47:27.593Z","pid":99850,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:47:27.594Z","pid":99850,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T03:47:27.595Z","pid":99850,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T03:47:57.656Z","pid":99850,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T03:48:29.881Z","pid":99974,"level":"info","role":"agent","msg":"Registering channel","data":{"jid":"tg:7810829778","name":"Brian Truong","trigger":"@Andy","folder":"telegram_main","channel":"telegram","requiresTrigger":false,"isMain":true,"assistantName":"Andy"}}
+{"at":"2026-04-10T03:48:29.886Z","pid":99974,"level":"info","role":"agent","msg":"Wrote registration to SQLite"}
+{"at":"2026-04-10T03:48:29.886Z","pid":99974,"level":"info","role":"agent","msg":"Created CLAUDE.md from template","data":{"file":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/CLAUDE.md","template":"/Users/tht0021/Documents/nanoclaw/groups/main/CLAUDE.md"}}
+{"at":"2026-04-10T03:49:38.157Z","pid":99850,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-10T03:49:38.160Z","pid":99850,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:49:38.164Z","pid":99850,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T03:49:39.774Z","pid":211,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T03:49:39.775Z","pid":211,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T03:49:40.223Z","pid":211,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T03:49:40.229Z","pid":211,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:49:40.230Z","pid":211,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T03:49:40.231Z","pid":211,"level":"info","role":"agent","msg":"Recovery: found unprocessed messages","data":{"group":"Brian Truong","pendingCount":2}}
+{"at":"2026-04-10T03:49:40.235Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":2}}
+{"at":"2026-04-10T03:49:40.238Z","pid":211,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T03:49:40.238Z","pid":211,"level":"info","role":"agent","msg":"New messages","data":{"count":2}}
+{"at":"2026-04-10T03:49:41.029Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775792980733"}}
+{"at":"2026-04-10T03:49:41.029Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775792980733","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:49:43.667Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":2947,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-49-43-666Z.log"}}
+{"at":"2026-04-10T03:49:43.668Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:49:43.670Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:49:43.670Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:49:43.673Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":2}}
+{"at":"2026-04-10T03:49:43.961Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775792983897"}}
+{"at":"2026-04-10T03:49:43.962Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775792983897","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:49:44.373Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":478,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-49-44-372Z.log"}}
+{"at":"2026-04-10T03:49:44.373Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:49:44.374Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:49:44.374Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:49:48.246Z","pid":211,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T03:49:48.253Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:49:48.649Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775792988583"}}
+{"at":"2026-04-10T03:49:48.650Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775792988583","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:49:49.041Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":459,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-49-49-040Z.log"}}
+{"at":"2026-04-10T03:49:49.041Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:49:49.042Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:49:49.043Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:49:49.045Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:49:49.339Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775792989277"}}
+{"at":"2026-04-10T03:49:49.340Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775792989277","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:49:49.676Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":401,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-49-49-675Z.log"}}
+{"at":"2026-04-10T03:49:49.676Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:49:49.677Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:49:49.677Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:49:54.380Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:49:55.078Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775792994981"}}
+{"at":"2026-04-10T03:49:55.078Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775792994981","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:49:55.454Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":473,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-49-55-453Z.log"}}
+{"at":"2026-04-10T03:49:55.454Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:49:55.455Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:49:55.456Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:50:09.048Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:50:09.599Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793009505"}}
+{"at":"2026-04-10T03:50:09.600Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793009505","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:10.030Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":526,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-10-029Z.log"}}
+{"at":"2026-04-10T03:50:10.030Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:10.032Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:10.032Z","pid":211,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"tg:7810829778","retryCount":6}}
+{"at":"2026-04-10T03:50:10.269Z","pid":211,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T03:50:29.685Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:50:30.375Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793030281"}}
+{"at":"2026-04-10T03:50:30.375Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793030281","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:30.925Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":646,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-30-924Z.log"}}
+{"at":"2026-04-10T03:50:30.925Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:30.926Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:30.927Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:50:35.931Z","pid":211,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:50:36.539Z","pid":211,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793036445"}}
+{"at":"2026-04-10T03:50:36.539Z","pid":211,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793036445","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:36.907Z","pid":211,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":464,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-36-906Z.log"}}
+{"at":"2026-04-10T03:50:36.907Z","pid":211,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:36.908Z","pid":211,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:36.908Z","pid":211,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:50:37.687Z","pid":211,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-10T03:50:37.688Z","pid":211,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:50:37.689Z","pid":211,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T03:50:40.952Z","pid":497,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T03:50:40.953Z","pid":497,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T03:50:41.332Z","pid":497,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T03:50:41.336Z","pid":497,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:50:41.337Z","pid":497,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T03:50:41.337Z","pid":497,"level":"info","role":"agent","msg":"Recovery: found unprocessed messages","data":{"group":"Brian Truong","pendingCount":3}}
+{"at":"2026-04-10T03:50:41.340Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:50:41.342Z","pid":497,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T03:50:41.911Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793041817"}}
+{"at":"2026-04-10T03:50:41.911Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793041817","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:42.257Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":444,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-42-256Z.log"}}
+{"at":"2026-04-10T03:50:42.257Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:42.258Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:42.258Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:50:47.263Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":3}}
+{"at":"2026-04-10T03:50:47.824Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793047728"}}
+{"at":"2026-04-10T03:50:47.825Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793047728","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:48.187Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":463,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-48-187Z.log"}}
+{"at":"2026-04-10T03:50:48.187Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:48.189Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:48.189Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:50:49.347Z","pid":497,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T03:50:49.351Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:50:49.612Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793049579"}}
+{"at":"2026-04-10T03:50:49.613Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793049579","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:49.988Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":411,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-49-987Z.log"}}
+{"at":"2026-04-10T03:50:49.988Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:49.990Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:49.990Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:50:58.196Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:50:58.799Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793058690"}}
+{"at":"2026-04-10T03:50:58.799Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793058690","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:50:59.306Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":629,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-50-59-306Z.log"}}
+{"at":"2026-04-10T03:50:59.306Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:50:59.308Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:50:59.308Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:51:09.999Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:51:10.554Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793070457"}}
+{"at":"2026-04-10T03:51:10.554Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793070457","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:51:11.061Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":605,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-51-11-060Z.log"}}
+{"at":"2026-04-10T03:51:11.061Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:51:11.062Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:51:11.062Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:51:11.390Z","pid":497,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T03:51:39.315Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:51:39.683Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793099588"}}
+{"at":"2026-04-10T03:51:39.684Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793099588","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:51:40.133Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":547,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-51-40-133Z.log"}}
+{"at":"2026-04-10T03:51:40.133Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:51:40.134Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:51:40.135Z","pid":497,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"tg:7810829778","retryCount":6}}
+{"at":"2026-04-10T03:52:12.565Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:52:17.565Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:52:27.565Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:52:12.568Z","pid":900,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:52:12.569Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:52:17.569Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:52:27.569Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:52:47.569Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:53:27.569Z","pid":900,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:54:47.569Z","pid":900,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:52:12.585Z","pid":901,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-6hVJiX/sender-allowlist.json"}}
+{"at":"2026-04-10T03:52:12.587Z","pid":901,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-Z7eTrr/sender-allowlist.json"}}
+{"at":"2026-04-10T03:52:12.589Z","pid":901,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-66T8Xj/sender-allowlist.json"}}
+{"at":"2026-04-10T03:52:12.590Z","pid":901,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-RxOvAk/sender-allowlist.json"}}
+{"at":"2026-04-10T03:52:12.619Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132619-19ls3u","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.621Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132621-iz9nkg","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.623Z","pid":895,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:52:12.624Z","pid":895,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:52:12.623Z","pid":904,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:52:12.625Z","pid":895,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:52:12.623Z","pid":904,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:52:12.623Z","pid":904,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:52:12.626Z","pid":895,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.627Z","pid":895,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.627Z","pid":895,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:52:12.628Z","pid":895,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.629Z","pid":895,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:52:12.630Z","pid":895,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:52:12.632Z","pid":895,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.633Z","pid":895,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.635Z","pid":895,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.637Z","pid":895,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:52:12.638Z","pid":895,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:52:12.645Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132645-1v8h8y","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.647Z","pid":895,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:52:12.647Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132647-ty2nb1","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.648Z","pid":895,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:52:12.649Z","pid":895,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:52:12.649Z","pid":895,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:52:12.650Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132650-oqpyyz","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:52:12.651Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132651-7zoeyk","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.651Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132651-uqwcn8","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.652Z","pid":895,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793132652-yx1xho","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:52:12.654Z","pid":895,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:52:31.071Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:52:31.426Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793151312"}}
+{"at":"2026-04-10T03:52:31.426Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793151312","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:52:31.888Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":578,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-52-31-888Z.log"}}
+{"at":"2026-04-10T03:52:31.889Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:52:31.890Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:52:31.890Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:52:36.895Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:52:37.612Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793157494"}}
+{"at":"2026-04-10T03:52:37.613Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793157494","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:52:37.965Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":472,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-52-37-965Z.log"}}
+{"at":"2026-04-10T03:52:37.965Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:52:37.966Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:52:37.966Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:52:47.972Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:52:48.733Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793168634"}}
+{"at":"2026-04-10T03:52:48.733Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793168634","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:52:49.153Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":520,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-52-49-152Z.log"}}
+{"at":"2026-04-10T03:52:49.153Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:52:49.154Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:52:49.155Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:53:09.165Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:53:09.977Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793189736"}}
+{"at":"2026-04-10T03:53:09.978Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793189736","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:53:10.364Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":629,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-53-10-363Z.log"}}
+{"at":"2026-04-10T03:53:10.364Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:53:10.365Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:53:10.366Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:53:50.373Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:53:51.123Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793230993"}}
+{"at":"2026-04-10T03:53:51.124Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793230993","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:53:51.554Z","pid":497,"level":"error","role":"agent","msg":"Container exited with error","data":{"group":"Brian Truong","code":125,"duration":565,"stderr":"Unable to find image 'nanoclaw-agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n","stdout":"","logFile":"/Users/tht0021/Documents/nanoclaw/groups/telegram_main/logs/container-2026-04-10T03-53-51-553Z.log"}}
+{"at":"2026-04-10T03:53:51.554Z","pid":497,"level":"error","role":"agent","msg":"Container agent error","data":{"group":"Brian Truong","error":"Container exited with code 125: -agent:latest' locally\ndocker: Error response from daemon: pull access denied for nanoclaw-agent, repository does not exist or may require 'docker login'\n\nRun 'docker run --help' for more information\n"}}
+{"at":"2026-04-10T03:53:51.556Z","pid":497,"level":"warn","role":"agent","msg":"Agent error, rolled back message cursor for retry","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:53:51.556Z","pid":497,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"tg:7810829778","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:55:11.559Z","pid":497,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":4}}
+{"at":"2026-04-10T03:55:12.156Z","pid":497,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793312050"}}
+{"at":"2026-04-10T03:55:12.156Z","pid":497,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793312050","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:55:17.694Z","pid":497,"level":"info","role":"agent","msg":"Agent output: 33 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:55:31.531Z","pid":497,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T03:55:31.764Z","pid":497,"level":"info","role":"agent","msg":"Agent output: 33 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:55:49.564Z","pid":497,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T03:55:49.948Z","pid":497,"level":"info","role":"agent","msg":"Agent output: 33 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T03:57:23.577Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:57:28.577Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:57:38.577Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:57:23.580Z","pid":1770,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:57:23.581Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:57:28.581Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:57:38.581Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:57:58.581Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:58:38.581Z","pid":1770,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T03:59:58.581Z","pid":1770,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:57:23.592Z","pid":1772,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-OtUftT/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:23.594Z","pid":1772,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-5mSoPV/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:23.594Z","pid":1772,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-FxWXTN/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:23.595Z","pid":1772,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-YMXCkQ/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:23.626Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443625-yt65b2","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.628Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443627-frmtnf","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.628Z","pid":1765,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:23.629Z","pid":1765,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:57:23.630Z","pid":1765,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:23.631Z","pid":1765,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.632Z","pid":1765,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.631Z","pid":1773,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:57:23.631Z","pid":1773,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:57:23.631Z","pid":1773,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:57:23.633Z","pid":1765,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:23.634Z","pid":1765,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.635Z","pid":1765,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:57:23.636Z","pid":1765,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:23.637Z","pid":1765,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.637Z","pid":1765,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.638Z","pid":1765,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.638Z","pid":1765,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:57:23.639Z","pid":1765,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:23.645Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443645-hps13e","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.647Z","pid":1765,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:57:23.647Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443647-tke99f","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.648Z","pid":1765,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:57:23.648Z","pid":1765,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:57:23.649Z","pid":1765,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:57:23.649Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443649-e3ox4p","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:57:23.651Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443651-tpm6d7","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.652Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443652-243p6o","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.652Z","pid":1765,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793443652-e7brkd","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:23.654Z","pid":1765,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:57:57.995Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:58:02.995Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:58:12.995Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:57:58.000Z","pid":1983,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:57:58.002Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:58:03.002Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:58:13.002Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:58:33.002Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:59:13.002Z","pid":1983,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T04:00:33.002Z","pid":1983,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:57:58.016Z","pid":1985,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-t4wcuW/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:58.018Z","pid":1985,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-vprB5b/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:58.019Z","pid":1985,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-OnZH6N/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:58.020Z","pid":1985,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-jwcAe3/sender-allowlist.json"}}
+{"at":"2026-04-10T03:57:58.057Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478057-bfhu0q","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.060Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478059-7ostyd","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.061Z","pid":1978,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:58.062Z","pid":1978,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:57:58.063Z","pid":1978,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:58.065Z","pid":1978,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.066Z","pid":1978,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.067Z","pid":1978,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:58.064Z","pid":1987,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:57:58.064Z","pid":1987,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:57:58.067Z","pid":1978,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.064Z","pid":1987,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:57:58.068Z","pid":1978,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:57:58.068Z","pid":1978,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:57:58.070Z","pid":1978,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.071Z","pid":1978,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.073Z","pid":1978,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.073Z","pid":1978,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:57:58.074Z","pid":1978,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:57:58.081Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478081-9jnt6x","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.083Z","pid":1978,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:57:58.084Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478084-yrhe9x","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.085Z","pid":1978,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:57:58.085Z","pid":1978,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:57:58.086Z","pid":1978,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:57:58.087Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478086-iu055i","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:57:58.087Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478087-zi3njr","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.088Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478088-mxsm23","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.089Z","pid":1978,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793478089-p2uf3k","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:57:58.090Z","pid":1978,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:58:30.483Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:58:35.483Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:58:45.483Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:58:30.487Z","pid":2254,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:58:30.488Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:58:35.488Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:58:45.488Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:59:05.488Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T03:59:45.488Z","pid":2254,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T04:01:05.488Z","pid":2254,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:58:30.514Z","pid":2255,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-12IWgh/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:30.516Z","pid":2255,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-srxs6a/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:30.516Z","pid":2255,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-MWJkVG/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:30.517Z","pid":2255,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-Ylaq1K/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:30.557Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510556-dwzksx","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.559Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510559-96gmvc","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.561Z","pid":2249,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:30.562Z","pid":2249,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:58:30.562Z","pid":2258,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:58:30.562Z","pid":2258,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:58:30.564Z","pid":2249,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:30.562Z","pid":2258,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:58:30.565Z","pid":2249,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.566Z","pid":2249,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.566Z","pid":2249,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:30.567Z","pid":2249,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.568Z","pid":2249,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:58:30.568Z","pid":2249,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:30.569Z","pid":2249,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.570Z","pid":2249,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.571Z","pid":2249,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.572Z","pid":2249,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:58:30.574Z","pid":2249,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:30.584Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510584-p0aj8j","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.586Z","pid":2249,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:58:30.587Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510587-dbw3y4","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.587Z","pid":2249,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:58:30.588Z","pid":2249,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:58:30.589Z","pid":2249,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:58:30.590Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510590-mokdhj","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:58:30.591Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510591-rzwz56","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.591Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510591-rqwj1w","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.592Z","pid":2249,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793510592-pmje8p","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:30.594Z","pid":2249,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:58:47.105Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:58:52.105Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:59:02.105Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:58:47.109Z","pid":2432,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T03:58:47.110Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":1,"delayMs":5000}}
+{"at":"2026-04-10T03:58:52.110Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":2,"delayMs":10000}}
+{"at":"2026-04-10T03:59:02.110Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":3,"delayMs":20000}}
+{"at":"2026-04-10T03:59:22.110Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":4,"delayMs":40000}}
+{"at":"2026-04-10T04:00:02.110Z","pid":2432,"level":"info","role":"agent","msg":"Scheduling retry with backoff","data":{"groupJid":"group1@g.us","retryCount":5,"delayMs":80000}}
+{"at":"2026-04-10T04:01:22.110Z","pid":2432,"level":"error","role":"agent","msg":"Max retries exceeded, dropping messages (will retry on next incoming message)","data":{"groupJid":"group1@g.us","retryCount":6}}
+{"at":"2026-04-10T03:58:47.125Z","pid":2434,"level":"warn","role":"agent","msg":"sender-allowlist: invalid JSON","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-RiIqtW/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:47.127Z","pid":2434,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-Vd8tqb/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:47.128Z","pid":2434,"level":"warn","role":"agent","msg":"sender-allowlist: invalid or missing default entry","data":{"path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-ibxSq9/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:47.129Z","pid":2434,"level":"warn","role":"agent","msg":"sender-allowlist: skipping invalid chat entry","data":{"jid":"bad","path":"/var/folders/1k/4lxj31hs07lc9dpcjsyb0xw40000gq/T/allowlist-test-eAgXle/sender-allowlist.json"}}
+{"at":"2026-04-10T03:58:47.169Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527169-b02c3x","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.171Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527171-wh03e6","sourceGroup":"other-group","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.172Z","pid":2427,"level":"warn","role":"agent","msg":"Unauthorized schedule_task attempt blocked","data":{"sourceGroup":"other-group","targetFolder":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:47.173Z","pid":2427,"level":"warn","role":"agent","msg":"Cannot schedule task: target group not registered","data":{"targetJid":"unknown@g.us"}}
+{"at":"2026-04-10T03:58:47.172Z","pid":2435,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:58:47.172Z","pid":2435,"level":"info","role":"agent","msg":"Found due tasks","data":{"count":1}}
+{"at":"2026-04-10T03:58:47.172Z","pid":2435,"level":"error","role":"agent","msg":"Task has invalid group folder","data":{"taskId":"task-invalid-folder","groupFolder":"../../outside","error":"Invalid group folder \"../../outside\""}}
+{"at":"2026-04-10T03:58:47.175Z","pid":2427,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:47.176Z","pid":2427,"level":"info","role":"agent","msg":"Task paused via IPC","data":{"taskId":"task-other","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.177Z","pid":2427,"level":"warn","role":"agent","msg":"Unauthorized task pause attempt","data":{"taskId":"task-main","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.179Z","pid":2427,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:47.180Z","pid":2427,"level":"info","role":"agent","msg":"Task resumed via IPC","data":{"taskId":"task-paused","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.181Z","pid":2427,"level":"warn","role":"agent","msg":"Unauthorized task resume attempt","data":{"taskId":"task-paused","sourceGroup":"third-group"}}
+{"at":"2026-04-10T03:58:47.182Z","pid":2427,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-to-cancel","sourceGroup":"whatsapp_main"}}
+{"at":"2026-04-10T03:58:47.183Z","pid":2427,"level":"info","role":"agent","msg":"Task cancelled via IPC","data":{"taskId":"task-own","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.184Z","pid":2427,"level":"warn","role":"agent","msg":"Unauthorized task cancel attempt","data":{"taskId":"task-foreign","sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.186Z","pid":2427,"level":"warn","role":"agent","msg":"Unauthorized register_group attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.187Z","pid":2427,"level":"warn","role":"agent","msg":"Invalid register_group request - unsafe folder name","data":{"sourceGroup":"whatsapp_main","folder":"../../outside"}}
+{"at":"2026-04-10T03:58:47.188Z","pid":2427,"level":"warn","role":"agent","msg":"Unauthorized refresh_groups attempt blocked","data":{"sourceGroup":"other-group"}}
+{"at":"2026-04-10T03:58:47.196Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527196-r9l55t","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.198Z","pid":2427,"level":"warn","role":"agent","msg":"Invalid cron expression","data":{"scheduleValue":"not a cron"}}
+{"at":"2026-04-10T03:58:47.199Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527199-d2m7iy","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.200Z","pid":2427,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"abc"}}
+{"at":"2026-04-10T03:58:47.201Z","pid":2427,"level":"warn","role":"agent","msg":"Invalid interval","data":{"scheduleValue":"0"}}
+{"at":"2026-04-10T03:58:47.202Z","pid":2427,"level":"warn","role":"agent","msg":"Invalid timestamp","data":{"scheduleValue":"not-a-date"}}
+{"at":"2026-04-10T03:58:47.204Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527204-dblqyo","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"group"}}
+{"at":"2026-04-10T03:58:47.204Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527204-top4b4","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.205Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527205-v0gam3","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.206Z","pid":2427,"level":"info","role":"agent","msg":"Task created via IPC","data":{"taskId":"task-1775793527206-lxxkky","sourceGroup":"whatsapp_main","targetFolder":"other-group","contextMode":"isolated"}}
+{"at":"2026-04-10T03:58:47.207Z","pid":2427,"level":"warn","role":"agent","msg":"Invalid register_group request - missing required fields","data":{"data":{"type":"register_group","jid":"partial@g.us","name":"Partial"}}}
+{"at":"2026-04-10T03:59:35.272Z","pid":497,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGINT"}}
+{"at":"2026-04-10T03:59:35.273Z","pid":497,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775793312050"]}}
+{"at":"2026-04-10T03:59:35.277Z","pid":497,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T03:59:37.040Z","pid":2582,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T03:59:42.386Z","pid":2585,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775793312050"]}}
+{"at":"2026-04-10T03:59:42.390Z","pid":2585,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T03:59:42.390Z","pid":2585,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T03:59:42.951Z","pid":2585,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T03:59:42.955Z","pid":2585,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T03:59:42.957Z","pid":2585,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T03:59:42.957Z","pid":2585,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T03:59:50.966Z","pid":2585,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T03:59:50.975Z","pid":2585,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T03:59:51.323Z","pid":2585,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793591211"}}
+{"at":"2026-04-10T03:59:51.324Z","pid":2585,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793591211","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T03:59:53.353Z","pid":2585,"level":"info","role":"agent","msg":"Agent output: 33 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:00:13.011Z","pid":2585,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:01:29.124Z","pid":2585,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGINT"}}
+{"at":"2026-04-10T04:01:29.125Z","pid":2585,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775793591211"]}}
+{"at":"2026-04-10T04:01:29.128Z","pid":2585,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:01:30.594Z","pid":3014,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T04:03:15.185Z","pid":3118,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T04:03:23.845Z","pid":3127,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775793591211"]}}
+{"at":"2026-04-10T04:03:23.852Z","pid":3127,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:03:23.854Z","pid":3127,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:03:24.247Z","pid":3127,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:03:24.250Z","pid":3127,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:03:24.252Z","pid":3127,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:03:24.252Z","pid":3127,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:03:32.267Z","pid":3127,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:03:32.275Z","pid":3127,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:03:32.659Z","pid":3127,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775793812528"}}
+{"at":"2026-04-10T04:03:32.660Z","pid":3127,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775793812528","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:03:35.774Z","pid":3127,"level":"info","role":"agent","msg":"Agent output: 157 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:03:54.330Z","pid":3127,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:08:44.486Z","pid":3127,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:08:45.737Z","pid":3127,"level":"info","role":"agent","msg":"Agent output: 157 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:08:50.938Z","pid":3127,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-10T04:08:50.939Z","pid":3127,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775793812528"]}}
+{"at":"2026-04-10T04:08:50.943Z","pid":3127,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:08:54.315Z","pid":3836,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775793812528"]}}
+{"at":"2026-04-10T04:08:54.322Z","pid":3836,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:08:54.323Z","pid":3836,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:08:54.715Z","pid":3836,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:08:54.718Z","pid":3836,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:08:54.719Z","pid":3836,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:08:54.719Z","pid":3836,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:09:00.723Z","pid":3836,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:09:00.730Z","pid":3836,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:09:01.076Z","pid":3836,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775794140965"}}
+{"at":"2026-04-10T04:09:01.076Z","pid":3836,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775794140965","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:09:03.614Z","pid":3836,"level":"info","role":"agent","msg":"Agent output: 157 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:09:24.787Z","pid":3836,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:11:24.836Z","pid":3836,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:11:26.181Z","pid":3836,"level":"info","role":"agent","msg":"Agent output: 157 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:11:28.952Z","pid":3836,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-10T04:11:28.953Z","pid":3836,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775794140965"]}}
+{"at":"2026-04-10T04:11:28.956Z","pid":3836,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:11:32.585Z","pid":4113,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775794140965"]}}
+{"at":"2026-04-10T04:11:32.592Z","pid":4113,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:11:32.592Z","pid":4113,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:11:33.130Z","pid":4113,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:11:33.135Z","pid":4113,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:11:33.137Z","pid":4113,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:11:33.138Z","pid":4113,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:11:39.143Z","pid":4113,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:11:39.147Z","pid":4113,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:11:39.514Z","pid":4113,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775794299384"}}
+{"at":"2026-04-10T04:11:39.515Z","pid":4113,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775794299384","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:11:42.480Z","pid":4113,"level":"info","role":"agent","msg":"Agent output: 157 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:11:50.445Z","pid":4113,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGINT"}}
+{"at":"2026-04-10T04:11:50.446Z","pid":4113,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775794299384"]}}
+{"at":"2026-04-10T04:11:50.447Z","pid":4113,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:11:51.755Z","pid":4187,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T04:12:00.440Z","pid":4194,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775794299384"]}}
+{"at":"2026-04-10T04:12:00.449Z","pid":4194,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:12:00.450Z","pid":4194,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:12:00.916Z","pid":4194,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:12:00.920Z","pid":4194,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:12:00.922Z","pid":4194,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:12:00.923Z","pid":4194,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:12:04.925Z","pid":4194,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:12:04.932Z","pid":4194,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:12:05.326Z","pid":4194,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775794325199"}}
+{"at":"2026-04-10T04:12:05.326Z","pid":4194,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775794325199","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:12:07.720Z","pid":4194,"level":"info","role":"agent","msg":"Agent output: 162 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:12:30.979Z","pid":4194,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:14:50.389Z","pid":4194,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGINT"}}
+{"at":"2026-04-10T04:14:50.390Z","pid":4194,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775794325199"]}}
+{"at":"2026-04-10T04:14:50.391Z","pid":4194,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:14:51.855Z","pid":4656,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T04:15:00.397Z","pid":4662,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775794325199"]}}
+{"at":"2026-04-10T04:15:00.409Z","pid":4662,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:15:00.410Z","pid":4662,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:15:00.835Z","pid":4662,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:15:00.840Z","pid":4662,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:15:00.842Z","pid":4662,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:15:00.843Z","pid":4662,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:15:06.854Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:15:06.870Z","pid":4662,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:15:07.304Z","pid":4662,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775794507164"}}
+{"at":"2026-04-10T04:15:07.305Z","pid":4662,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775794507164","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:15:09.414Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 196 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:15:14.877Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:15:15.774Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 173 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:15:22.887Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:15:24.313Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 209 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:15:30.909Z","pid":4662,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:32:05.694Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:32:07.288Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 462 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:33:15.758Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:33:17.156Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 672 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:33:33.777Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:33:35.343Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 552 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:35:29.854Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:35:31.301Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 603 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:35:43.869Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:35:44.964Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 289 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:35:59.887Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:36:00.929Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 280 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:36:05.900Z","pid":4662,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:36:06.837Z","pid":4662,"level":"info","role":"agent","msg":"Agent output: 540 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:37:44.637Z","pid":4662,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-10T04:37:44.639Z","pid":4662,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775794507164"]}}
+{"at":"2026-04-10T04:37:44.644Z","pid":4662,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:37:47.657Z","pid":8256,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775794507164"]}}
+{"at":"2026-04-10T04:37:47.676Z","pid":8256,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:37:47.677Z","pid":8256,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:37:48.078Z","pid":8256,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:37:48.082Z","pid":8256,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:37:48.084Z","pid":8256,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:37:48.085Z","pid":8256,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:38:18.156Z","pid":8256,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:39:46.166Z","pid":8256,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:39:46.182Z","pid":8256,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:39:46.682Z","pid":8256,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775795986424"}}
+{"at":"2026-04-10T04:39:46.683Z","pid":8256,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775795986424","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:39:49.457Z","pid":8256,"level":"info","role":"agent","msg":"Agent output: 840 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:43:11.448Z","pid":8256,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGINT"}}
+{"at":"2026-04-10T04:43:11.450Z","pid":8256,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775795986424"]}}
+{"at":"2026-04-10T04:43:11.456Z","pid":8256,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:43:12.596Z","pid":9734,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T04:45:55.153Z","pid":11238,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T04:46:02.908Z","pid":11246,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775795986424"]}}
+{"at":"2026-04-10T04:46:02.912Z","pid":11246,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:46:02.917Z","pid":11246,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:46:03.370Z","pid":11246,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:46:03.375Z","pid":11246,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:46:03.376Z","pid":11246,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:46:03.377Z","pid":11246,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:46:09.395Z","pid":11246,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T04:46:09.403Z","pid":11246,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T04:46:09.779Z","pid":11246,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775796369647"}}
+{"at":"2026-04-10T04:46:09.779Z","pid":11246,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775796369647","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T04:46:12.334Z","pid":11246,"level":"info","role":"agent","msg":"Agent output: 456 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T04:46:33.430Z","pid":11246,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T04:50:38.138Z","pid":11246,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-10T04:50:38.140Z","pid":11246,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-main-1775796369647"]}}
+{"at":"2026-04-10T04:50:38.144Z","pid":11246,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T04:50:41.334Z","pid":12069,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":1,"names":["nanoclaw-telegram-main-1775796369647"]}}
+{"at":"2026-04-10T04:50:41.351Z","pid":12069,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T04:50:41.352Z","pid":12069,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T04:50:41.824Z","pid":12069,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T04:50:41.829Z","pid":12069,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T04:50:41.830Z","pid":12069,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T04:50:41.831Z","pid":12069,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T04:51:11.891Z","pid":12069,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T05:02:44.643Z","pid":12069,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGINT"}}
+{"at":"2026-04-10T05:02:44.646Z","pid":12069,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-10T05:02:44.652Z","pid":12069,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-10T05:39:02.577Z","pid":18935,"level":"info","role":"dashboard","msg":"NanoClaw dashboard listening","data":{"host":"127.0.0.1","port":4780}}
+{"at":"2026-04-10T05:39:22.916Z","pid":18958,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-10T05:39:22.918Z","pid":18958,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":1}}
+{"at":"2026-04-10T05:39:23.340Z","pid":18958,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8608479155}}
+{"at":"2026-04-10T05:39:23.344Z","pid":18958,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-10T05:39:23.346Z","pid":18958,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-10T05:39:23.347Z","pid":18958,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-10T05:39:25.348Z","pid":18958,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T05:39:25.355Z","pid":18958,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Brian Truong","messageCount":1}}
+{"at":"2026-04-10T05:39:25.883Z","pid":18958,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-main-1775799565587"}}
+{"at":"2026-04-10T05:39:25.883Z","pid":18958,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Brian Truong","containerName":"nanoclaw-telegram-main-1775799565587","mountCount":8,"isMain":true}}
+{"at":"2026-04-10T05:39:28.621Z","pid":18958,"level":"info","role":"agent","msg":"Agent output: 149 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T05:39:29.359Z","pid":18958,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-10T05:39:30.317Z","pid":18958,"level":"info","role":"agent","msg":"Agent output: 128 chars","data":{"group":"Brian Truong"}}
+{"at":"2026-04-10T05:39:53.400Z","pid":18958,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-10T18:48:26.756Z","pid":57534,"level":"fatal","role":"dashboard","msg":"Uncaught exception","data":{"err":{"code":"EADDRINUSE","errno":-48,"syscall":"listen","address":"127.0.0.1","port":4780}}}
+{"at":"2026-04-10T18:49:52.005Z","pid":57680,"level":"fatal","role":"dashboard","msg":"Uncaught exception","data":{"err":{"code":"EADDRINUSE","errno":-48,"syscall":"listen","address":"127.0.0.1","port":4780}}}
+{"at":"2026-04-10T18:50:26.965Z","pid":57790,"level":"fatal","role":"dashboard","msg":"Uncaught exception","data":{"err":{"code":"EADDRINUSE","errno":-48,"syscall":"listen","address":"127.0.0.1","port":4780}}}
+{"at":"2026-04-10T18:50:29.900Z","pid":57816,"level":"fatal","role":"dashboard","msg":"Uncaught exception","data":{"err":{"code":"EADDRINUSE","errno":-48,"syscall":"listen","address":"127.0.0.1","port":4780}}}
+{"at":"2026-04-10T18:50:49.099Z","pid":57858,"level":"fatal","role":"dashboard","msg":"Uncaught exception","data":{"err":{"code":"EADDRINUSE","errno":-48,"syscall":"listen","address":"127.0.0.1","port":4780}}}
