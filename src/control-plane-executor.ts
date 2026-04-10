@@ -77,10 +77,11 @@ export async function executeControlPlaneTask(
   selection: ControlPlaneGroupSelection,
   options: ExecuteControlPlaneTaskOptions,
 ): Promise<ExecuteControlPlaneTaskResult> {
-  const { jid, group } = selection;
+  const { group } = selection;
   const isMain = group.isMain === true;
   const useGroupContext = CONTROL_PLANE_CONTEXT_MODE === 'group';
   const sessionId = useGroupContext ? getSession(group.folder) : undefined;
+  let finalResult: string | null = null;
 
   writeCurrentSnapshots(
     group.folder,
@@ -102,6 +103,9 @@ export async function executeControlPlaneTask(
     () => {},
     options.onOutput
       ? async (streamedOutput) => {
+          if (streamedOutput.result) {
+            finalResult = streamedOutput.result;
+          }
           if (useGroupContext && streamedOutput.newSessionId) {
             setSession(group.folder, streamedOutput.newSessionId);
           }
@@ -139,7 +143,7 @@ export async function executeControlPlaneTask(
 
   return {
     status: 'success',
-    result: output.result,
+    result: finalResult || output.result,
   };
 }
 

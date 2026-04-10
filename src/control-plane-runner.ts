@@ -252,7 +252,9 @@ function pruneRecentlyHandled(recentlyHandled: Map<string, number>): void {
 
 function normalizeMessageBody(value: string | null): string | null {
   if (!value) return null;
-  const trimmed = value.trim();
+  const trimmed = value
+    .replace(/<internal>[\s\S]*?<\/internal>/g, '')
+    .trim();
   if (!trimmed) return null;
   return trimmed.slice(0, 8000);
 }
