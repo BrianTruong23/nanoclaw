@@ -95,7 +95,11 @@ export function applySupportedEnvAliases(): void {
     process.env.NANOCLAW_MODEL = requestedModel;
   }
 
-  const githubToken = readEnvValue(['GITHUB_TOKEN', 'GH_TOKEN', 'GITHUB-TOKEN']);
+  const githubToken = readEnvValue([
+    'GITHUB_TOKEN',
+    'GH_TOKEN',
+    'GITHUB-TOKEN',
+  ]);
   if (githubToken) {
     if (!process.env.GITHUB_TOKEN) {
       process.env.GITHUB_TOKEN = githubToken;

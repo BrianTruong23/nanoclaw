@@ -684,10 +684,7 @@ async function main(): Promise<void> {
     if (!prompt) {
       const channel = findChannel(channels, chatJid);
       if (channel) {
-        await channel.sendMessage(
-          chatJid,
-          'Usage: /codex <coding task>',
-        );
+        await channel.sendMessage(chatJid, 'Usage: /codex <coding task>');
       }
       return;
     }
