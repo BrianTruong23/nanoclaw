@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import { OneCLI } from '@onecli-sh/sdk';
-import { ASSISTANT_NAME, CONTROL_PLANE_URL, DEFAULT_TRIGGER, getTriggerPattern, GROUPS_DIR, IDLE_TIMEOUT, MAX_MESSAGES_PER_PROMPT, ONECLI_URL, POLL_INTERVAL, TIMEZONE, } from './config.js';
+import { ASSISTANT_NAME, buildTriggerPattern, CONTROL_PLANE_URL, DEFAULT_TRIGGER, getTriggerPattern, GROUPS_DIR, IDLE_TIMEOUT, MAX_MESSAGES_PER_PROMPT, ONECLI_URL, OTHER_BOT_TRIGGERS, POLL_INTERVAL, TIMEZONE, WAIT_FOR_BOT_RESPONSE, } from './config.js';
 import './channels/index.js';
 import { getChannelFactory, getRegisteredChannelNames, } from './channels/registry.js';
 import { runContainerAgent, writeGroupsSnapshot, writeTasksSnapshot, } from './container-runner.js';
 import { cleanupOrphans, ensureContainerRuntimeRunning, } from './container-runtime.js';
 import { initRuntimeDashboardState, markRuntimeDashboardStopped, updateRuntimeDashboardState, } from './dashboard-state.js';
-import { getAllChats, getAllRegisteredGroups, getAllSessions, deleteSession, getAllTasks, getLastBotMessageTimestamp, getMessagesSince, getNewMessages, getRouterState, initDatabase, setRegisteredGroup, setRouterState, setSession, storeChatMetadata, storeMessage, } from './db.js';
+import { getAllChats, getAllRegisteredGroups, getAllSessions, deleteSession, getAllTasks, getLastBotMessageTimestamp, getMessagesSince, getNewMessages, getRouterState, hasCrossBotResponse, initDatabase, setRegisteredGroup, setRouterState, setSession, storeChatMetadata, storeMessage, } from './db.js';
 import { GroupQueue } from './group-queue.js';
 import { resolveGroupFolderPath } from './group-folder.js';
 import { startIpcWatcher } from './ipc.js';
@@ -145,6 +145,30 @@ async function processGroupMessages(chatJid) {
     const missedMessages = getMessagesSince(chatJid, getOrRecoverCursor(chatJid), ASSISTANT_NAME, MAX_MESSAGES_PER_PROMPT);
     if (missedMessages.length === 0)
         return true;
+    // Multi-bot coordination: base decisions on the newest human message only,
+    // so accumulated history doesn't block responses to later messages.
+    const newestHumanMsg = [...missedMessages].reverse().find((m) => !m.is_from_me);
+    if (OTHER_BOT_TRIGGERS.length > 0 && newestHumanMsg) {
+        const otherPatterns = OTHER_BOT_TRIGGERS.map(buildTriggerPattern);
+        const myPattern = getTriggerPattern(group.trigger);
+        const addressesOther = otherPatterns.some((p) => p.test(newestHumanMsg.content.trim()));
+        const addressesMe = myPattern.test(newestHumanMsg.content.trim());
+        if (addressesOther && !addressesMe)
+            return true;
+    }
+    // Secondary bot ordering: wait for the primary bot to respond first on no-trigger messages
+    if (!isMainGroup && WAIT_FOR_BOT_RESPONSE && OTHER_BOT_TRIGGERS.length > 0 && newestHumanMsg) {
+        const myPattern = getTriggerPattern(group.trigger);
+        const otherPatterns = OTHER_BOT_TRIGGERS.map(buildTriggerPattern);
+        const newestAddressesMe = myPattern.test(newestHumanMsg.content.trim());
+        const newestAddressesOther = otherPatterns.some((p) => p.test(newestHumanMsg.content.trim()));
+        if (!newestAddressesMe && !newestAddressesOther) {
+            const cursor = lastAgentTimestamp[chatJid] || '';
+            if (!hasCrossBotResponse(chatJid, cursor)) {
+                return true; // Primary bot hasn't responded yet — wait for next poll
+            }
+        }
+    }
     // For non-main groups, check if trigger is required and present
     if (!isMainGroup && group.requiresTrigger !== false) {
         const triggerPattern = getTriggerPattern(group.trigger);
@@ -172,7 +196,12 @@ async function processGroupMessages(chatJid) {
             queue.closeStdin(chatJid);
         }, IDLE_TIMEOUT);
     };
-    await channel.setTyping?.(chatJid, true);
+    try {
+        await channel.setTyping?.(chatJid, true);
+    }
+    catch (err) {
+        logger.warn({ chatJid, err }, 'Failed to set typing indicator');
+    }
     let hadError = false;
     let outputSentToUser = false;
     const output = await runAgent(group, prompt, chatJid, async (result) => {
@@ -198,7 +227,12 @@ async function processGroupMessages(chatJid) {
             hadError = true;
         }
     });
-    await channel.setTyping?.(chatJid, false);
+    try {
+        await channel.setTyping?.(chatJid, false);
+    }
+    catch (err) {
+        logger.warn({ chatJid, err }, 'Failed to clear typing indicator');
+    }
     if (idleTimer)
         clearTimeout(idleTimer);
     if (output === 'error' || hadError) {
@@ -460,10 +494,16 @@ async function main() {
         if (!channel)
             return;
         await channel.sendMessage(chatJid, 'Starting Codex coding agent…');
-        await channel.setTyping?.(chatJid, true);
+        try {
+            await channel.setTyping?.(chatJid, true);
+        }
+        catch (e) { }
         try {
             const result = await runCodexExec(prompt, process.cwd());
-            await channel.setTyping?.(chatJid, false);
+            try {
+                await channel.setTyping?.(chatJid, false);
+            }
+            catch (e) { }
             if (result.ok) {
                 await channel.sendMessage(chatJid, result.text || 'Codex completed.');
             }
@@ -472,7 +512,10 @@ async function main() {
             }
         }
         catch (err) {
-            await channel.setTyping?.(chatJid, false);
+            try {
+                await channel.setTyping?.(chatJid, false);
+            }
+            catch (e) { }
             await channel.sendMessage(chatJid, `Codex failed: ${err instanceof Error ? err.message : String(err)}`);
         }
     }

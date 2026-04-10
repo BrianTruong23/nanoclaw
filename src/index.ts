@@ -5,6 +5,7 @@ import { OneCLI } from '@onecli-sh/sdk';
 
 import {
   ASSISTANT_NAME,
+  buildTriggerPattern,
   CONTROL_PLANE_URL,
   DEFAULT_TRIGGER,
   getTriggerPattern,
@@ -12,8 +13,10 @@ import {
   IDLE_TIMEOUT,
   MAX_MESSAGES_PER_PROMPT,
   ONECLI_URL,
+  OTHER_BOT_TRIGGERS,
   POLL_INTERVAL,
   TIMEZONE,
+  WAIT_FOR_BOT_RESPONSE,
 } from './config.js';
 import './channels/index.js';
 import {
@@ -45,6 +48,7 @@ import {
   getMessagesSince,
   getNewMessages,
   getRouterState,
+  hasCrossBotResponse,
   initDatabase,
   setRegisteredGroup,
   setRouterState,
@@ -250,6 +254,37 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
 
   if (missedMessages.length === 0) return true;
 
+  // Multi-bot coordination: base decisions on the newest human message only,
+  // so accumulated history doesn't block responses to later messages.
+  const newestHumanMsg = [...missedMessages].reverse().find((m) => !m.is_from_me);
+
+  if (OTHER_BOT_TRIGGERS.length > 0 && newestHumanMsg) {
+    const otherPatterns = OTHER_BOT_TRIGGERS.map(buildTriggerPattern);
+    const myPattern = getTriggerPattern(group.trigger);
+    const addressesOther = otherPatterns.some((p) =>
+      p.test(newestHumanMsg.content.trim()),
+    );
+    const addressesMe = myPattern.test(newestHumanMsg.content.trim());
+    if (addressesOther && !addressesMe) return true;
+  }
+
+  // Secondary bot ordering: wait for the primary bot to respond first on no-trigger messages
+  if (!isMainGroup && WAIT_FOR_BOT_RESPONSE && OTHER_BOT_TRIGGERS.length > 0 && newestHumanMsg) {
+    const myPattern = getTriggerPattern(group.trigger);
+    const otherPatterns = OTHER_BOT_TRIGGERS.map(buildTriggerPattern);
+    const newestAddressesMe = myPattern.test(newestHumanMsg.content.trim());
+    const newestAddressesOther = otherPatterns.some((p) =>
+      p.test(newestHumanMsg.content.trim()),
+    );
+    if (!newestAddressesMe && !newestAddressesOther) {
+      const cursor = lastAgentTimestamp[chatJid] || '';
+      if (!hasCrossBotResponse(chatJid, cursor)) {
+        setTimeout(() => queue.enqueueMessageCheck(chatJid), 2000);
+        return true; // Primary bot hasn't responded yet — wait and poll again
+      }
+    }
+  }
+
   // For non-main groups, check if trigger is required and present
   if (!isMainGroup && group.requiresTrigger !== false) {
     const triggerPattern = getTriggerPattern(group.trigger);
@@ -290,7 +325,11 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
     }, IDLE_TIMEOUT);
   };
 
-  await channel.setTyping?.(chatJid, true);
+  try {
+    await channel.setTyping?.(chatJid, true);
+  } catch (err) {
+    logger.warn({ chatJid, err }, 'Failed to set typing indicator');
+  }
   let hadError = false;
   let outputSentToUser = false;
 
@@ -321,7 +360,11 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
     }
   });
 
-  await channel.setTyping?.(chatJid, false);
+  try {
+    await channel.setTyping?.(chatJid, false);
+  } catch (err) {
+    logger.warn({ chatJid, err }, 'Failed to clear typing indicator');
+  }
   if (idleTimer) clearTimeout(idleTimer);
 
   if (output === 'error' || hadError) {
@@ -695,11 +738,15 @@ async function main(): Promise<void> {
     if (!channel) return;
 
     await channel.sendMessage(chatJid, 'Starting Codex coding agent…');
-    await channel.setTyping?.(chatJid, true);
+    try {
+      await channel.setTyping?.(chatJid, true);
+    } catch (e) {}
 
     try {
       const result = await runCodexExec(prompt, process.cwd());
-      await channel.setTyping?.(chatJid, false);
+      try {
+        await channel.setTyping?.(chatJid, false);
+      } catch (e) {}
       if (result.ok) {
         await channel.sendMessage(chatJid, result.text || 'Codex completed.');
       } else {
@@ -709,7 +756,9 @@ async function main(): Promise<void> {
         );
       }
     } catch (err) {
-      await channel.setTyping?.(chatJid, false);
+      try {
+        await channel.setTyping?.(chatJid, false);
+      } catch (e) {}
       await channel.sendMessage(
         chatJid,
         `Codex failed: ${err instanceof Error ? err.message : String(err)}`,
