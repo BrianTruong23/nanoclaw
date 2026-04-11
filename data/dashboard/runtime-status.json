@@ -1,10 +1,10 @@
 {
   "role": "agent",
-  "pid": 15049,
+  "pid": 51854,
   "status": "running",
-  "startedAt": "2026-04-10T22:06:48.552Z",
-  "updatedAt": "2026-04-10T22:06:57.048Z",
-  "heartbeatAt": "2026-04-10T22:06:57.048Z",
+  "startedAt": "2026-04-11T02:55:01.695Z",
+  "updatedAt": "2026-04-11T02:55:38.605Z",
+  "heartbeatAt": "2026-04-11T02:55:38.605Z",
   "defaultTrigger": "@Andy",
   "channels": [
     {
