@@ -4658,3 +4658,6 @@
 {"at":"2026-04-11T04:19:28.224Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
 {"at":"2026-04-11T04:19:29.573Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
 {"at":"2026-04-11T04:19:39.581Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T04:19:46.685Z","pid":83293,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-11T04:19:46.686Z","pid":83293,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":0,"detachedContainers":[]}}
+{"at":"2026-04-11T04:19:46.688Z","pid":83293,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
