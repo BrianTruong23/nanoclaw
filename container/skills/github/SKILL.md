@@ -20,6 +20,11 @@ git diff
 git log --oneline -5
 git add <files>
 git commit -m "message"
+git checkout <branch>
+git stash
+git merge <branch>
+git rebase <branch>
+git revert <commit_hash>
 github push
 github push <branch>
 ```

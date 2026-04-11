@@ -4539,3 +4539,103 @@
 {"at":"2026-04-11T03:48:30.464Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
 {"at":"2026-04-11T03:48:40.041Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
 {"at":"2026-04-11T03:48:40.471Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:48:50.475Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:49:00.484Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:49:10.038Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:49:10.487Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:49:20.491Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:49:30.499Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:49:40.035Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:49:40.504Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:49:50.509Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:50:00.525Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:50:10.052Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:50:10.533Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:50:20.543Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:50:30.549Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:50:40.045Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:50:40.557Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:50:50.562Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:51:00.573Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:51:04.771Z","pid":76532,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-11T03:51:06.274Z","pid":76532,"level":"info","role":"agent","msg":"Agent output: 274 chars","data":{"group":"Research Strategy"}}
+{"at":"2026-04-11T03:51:10.040Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:51:10.579Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:51:20.583Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:51:20.800Z","pid":76532,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-11T03:51:22.378Z","pid":76532,"level":"info","role":"agent","msg":"Agent output: 240 chars","data":{"group":"Research Strategy"}}
+{"at":"2026-04-11T03:51:30.588Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:51:40.045Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:51:40.594Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:51:50.597Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:00.603Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:10.044Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:52:10.609Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:20.616Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:22.856Z","pid":76532,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-11T03:52:24.608Z","pid":76532,"level":"info","role":"agent","msg":"Agent output: 297 chars","data":{"group":"Research Strategy"}}
+{"at":"2026-04-11T03:52:30.621Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:40.047Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:52:40.645Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:50.648Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:52:50.889Z","pid":76532,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-11T03:52:53.072Z","pid":76532,"level":"info","role":"agent","msg":"Agent output: 591 chars","data":{"group":"Research Strategy"}}
+{"at":"2026-04-11T03:53:00.659Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:53:10.045Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:53:10.663Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:53:20.668Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:53:30.674Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:53:40.047Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:53:40.677Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:53:50.681Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:54:00.684Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:54:10.048Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:54:10.689Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:54:20.692Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:54:30.705Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:54:40.049Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:54:40.708Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:54:50.715Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:00.719Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:10.057Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:55:10.722Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:15.004Z","pid":76532,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-11T03:55:17.253Z","pid":76532,"level":"info","role":"agent","msg":"Agent output: 627 chars","data":{"group":"Research Strategy"}}
+{"at":"2026-04-11T03:55:20.725Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:30.734Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:40.052Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:55:40.750Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:50.754Z","pid":76532,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:55:50.773Z","pid":76532,"level":"info","role":"agent","msg":"Shutdown signal received","data":{"signal":"SIGTERM"}}
+{"at":"2026-04-11T03:55:50.774Z","pid":76532,"level":"info","role":"agent","msg":"GroupQueue shutting down (containers detached, not killed)","data":{"activeCount":1,"detachedContainers":["nanoclaw-telegram-group-1775878518264"]}}
+{"at":"2026-04-11T03:55:50.775Z","pid":76532,"level":"info","role":"agent","msg":"Telegram channel disconnected"}
+{"at":"2026-04-11T03:55:57.671Z","pid":83293,"level":"info","role":"agent","msg":"Stopped orphaned containers","data":{"count":2,"names":["nanoclaw-telegram-group-1775879575972","nanoclaw-telegram-group-1775878518264"]}}
+{"at":"2026-04-11T03:55:57.683Z","pid":83293,"level":"info","role":"agent","msg":"Database initialized"}
+{"at":"2026-04-11T03:55:57.686Z","pid":83293,"level":"info","role":"agent","msg":"State loaded","data":{"groupCount":2}}
+{"at":"2026-04-11T03:55:58.141Z","pid":83293,"level":"info","role":"agent","msg":"Telegram channel connected","data":{"botUserId":8657377100}}
+{"at":"2026-04-11T03:55:58.146Z","pid":83293,"level":"info","role":"agent","msg":"Scheduler loop started"}
+{"at":"2026-04-11T03:55:58.148Z","pid":83293,"level":"info","role":"agent","msg":"IPC watcher started (per-group namespaces)"}
+{"at":"2026-04-11T03:55:58.149Z","pid":83293,"level":"info","role":"agent","msg":"NanoClaw running (default trigger: @Andy)"}
+{"at":"2026-04-11T03:55:58.150Z","pid":83293,"level":"info","role":"agent","msg":"CONTROL_PLANE_URL set — starting embedded control-plane worker"}
+{"at":"2026-04-11T03:55:58.155Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane bootstrap failed","data":{"err":{}}}
+{"at":"2026-04-11T03:55:58.158Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:55:58.158Z","pid":83293,"level":"info","role":"agent","msg":"Control-plane worker started","data":{"groupFolder":"telegram_main","groupName":"Brian Truong","jid":"tg:7810829778","pollIntervalMs":10000,"heartbeatIntervalMs":30000}}
+{"at":"2026-04-11T03:55:58.160Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:56:08.164Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:56:18.172Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:56:28.163Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:56:28.176Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:56:28.202Z","pid":83293,"level":"info","role":"agent","msg":"[cleanup] Done — freed ~0K"}
+{"at":"2026-04-11T03:56:34.191Z","pid":83293,"level":"info","role":"agent","msg":"New messages","data":{"count":1}}
+{"at":"2026-04-11T03:56:34.215Z","pid":83293,"level":"info","role":"agent","msg":"Processing messages","data":{"group":"Research Strategy","messageCount":1}}
+{"at":"2026-04-11T03:56:34.605Z","pid":83293,"level":"warn","role":"agent","msg":"OneCLI gateway not reachable — container will have no credentials","data":{"containerName":"nanoclaw-telegram-group-1775879794479"}}
+{"at":"2026-04-11T03:56:34.606Z","pid":83293,"level":"info","role":"agent","msg":"Spawning container agent","data":{"group":"Research Strategy","containerName":"nanoclaw-telegram-group-1775879794479","mountCount":6,"isMain":false}}
+{"at":"2026-04-11T03:56:38.261Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:56:41.830Z","pid":83293,"level":"info","role":"agent","msg":"Agent output: 216 chars","data":{"group":"Research Strategy"}}
+{"at":"2026-04-11T03:56:48.269Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:56:58.168Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:56:58.274Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:57:08.278Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:57:18.283Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}
+{"at":"2026-04-11T03:57:28.164Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane heartbeat failed","data":{"err":{}}}
+{"at":"2026-04-11T03:57:28.286Z","pid":83293,"level":"warn","role":"agent","msg":"Control-plane poll iteration failed","data":{"err":{},"activeTaskId":null}}

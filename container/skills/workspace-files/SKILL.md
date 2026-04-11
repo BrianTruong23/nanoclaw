@@ -1,12 +1,12 @@
 ---
 name: workspace-files
 description: Create, read, and list text files in the bot workspace. Use when the user asks to save notes, create txt/md files, or share files between Andy and Bob.
-allowed-tools: Bash(workspace-list:*), Bash(workspace-read:*), Bash(workspace-write:*), Bash(workspace-delete:*), Bash(workspace-rename:*)
+allowed-tools: Bash(workspace-list:*), Bash(workspace-read:*), Bash(workspace-write:*), Bash(workspace-delete:*), Bash(workspace-rename:*), Bash(workspace-mkdir:*), Bash(workspace-copy:*), Bash(workspace-download:*)
 ---
 
 # Workspace Files
 
-Use this skill when the user asks to create, save, read, list, rename, or delete text files.
+Use this skill when the user asks to create, save, read, list, rename, delete, copy, or download files/directories.
 
 ## Shared Common Space
 
@@ -41,6 +41,9 @@ workspace-write notes.txt "text to save"
 workspace-write /workspace/common/notes.txt "text to save"
 workspace-rename notes.txt old_notes.txt
 workspace-delete old_notes.txt
+workspace-mkdir new_folder
+workspace-copy notes.txt new_folder/notes_copy.txt
+workspace-download https://example.com/file.pdf file.pdf
 ```
 
 Default relative paths use `/workspace/common`, so `workspace-write notes.txt "hello"` writes a shared file.

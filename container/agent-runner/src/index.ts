@@ -481,7 +481,7 @@ function normalizeAgentBrowserArgs(args: string[]): string[] {
   if (args[0] !== 'open' || !args[1]) return args;
   const target = args.slice(1).join(' ').trim();
   if (/^(https?:|about:)/i.test(target)) return ['open', target];
-  return ['open', `https://www.google.com/search?q=${encodeURIComponent(target)}`];
+  return ['open', `https://search.brave.com/search?q=${encodeURIComponent(target)}`];
 }
 
 function isAllowedGitCommand(args: string[]): boolean {
@@ -490,20 +490,25 @@ function isAllowedGitCommand(args: string[]): boolean {
   return new Set([
     'add',
     'branch',
+    'checkout',
     'clone',
     'commit',
     'diff',
     'fetch',
     'log',
+    'merge',
     'pull',
     'push',
+    'rebase',
     'remote',
+    'revert',
+    'stash',
     'status',
   ]).has(subcommand);
 }
 
 function isToolCommand(command: string): boolean {
-  return /^(agent-browser|git|github|touch|workspace-list|workspace-read|workspace-write|workspace-delete|workspace-rename)\b/.test(command.trim());
+  return /^(agent-browser|git|github|touch|workspace-list|workspace-read|workspace-write|workspace-delete|workspace-rename|workspace-mkdir|workspace-copy|workspace-download)\b/.test(command.trim());
 }
 
 function extractToolCommands(reply: string): string[] {
@@ -512,10 +517,10 @@ function extractToolCommands(reply: string): string[] {
   const isRunnable = (command: string): boolean => {
     const [executable, ...args] = shellSplit(command);
     if (!executable) return false;
-    if (executable === 'workspace-write') {
+    if (executable === 'workspace-write' || executable === 'workspace-copy' || executable === 'workspace-download') {
       return args.length >= 2 && args.slice(1).join(' ').trim() !== '...';
     }
-    if (executable === 'workspace-read' || executable === 'touch' || executable === 'workspace-delete') {
+    if (executable === 'workspace-read' || executable === 'touch' || executable === 'workspace-delete' || executable === 'workspace-mkdir') {
       return args.length >= 1 && args[0] !== '...';
     }
     if (executable === 'workspace-rename') {
@@ -534,7 +539,7 @@ function extractToolCommands(reply: string): string[] {
     commands.push(command);
   };
 
-  for (const match of reply.matchAll(/`((?:agent-browser|git|github|touch|workspace-list|workspace-read|workspace-write|workspace-delete|workspace-rename)(?:\s+[^`]+)?)`/g)) {
+  for (const match of reply.matchAll(/`((?:agent-browser|git|github|touch|workspace-list|workspace-read|workspace-write|workspace-delete|workspace-rename|workspace-mkdir|workspace-copy|workspace-download)(?:\s+[^`]+)?)`/g)) {
     add(match[1] || '');
   }
 
@@ -707,6 +712,39 @@ async function runWorkspaceCommand(command: string, args: string[]): Promise<str
       fs.renameSync(srcPath, destPath);
       return `Renamed ${srcPath} to ${destPath}`;
     }
+    if (command === 'workspace-mkdir') {
+      const target = args[0];
+      if (!target) return 'Usage: workspace-mkdir <path>';
+      const dirPath = resolveWorkspacePath(target, COMMON_DIR);
+      fs.mkdirSync(dirPath, { recursive: true });
+      return `Created directory ${dirPath}`;
+    }
+    if (command === 'workspace-copy') {
+      const src = args[0];
+      const dest = args[1];
+      if (!src || !dest) return 'Usage: workspace-copy <src_path> <dest_path>';
+      const srcPath = resolveWorkspacePath(src, COMMON_DIR);
+      const destPath = resolveWorkspacePath(dest, COMMON_DIR);
+      if (!fs.existsSync(srcPath)) return `File or directory not found: ${srcPath}`;
+      fs.cpSync(srcPath, destPath, { recursive: true });
+      return `Copied ${srcPath} to ${destPath}`;
+    }
+    if (command === 'workspace-download') {
+      const url = args[0];
+      const target = args[1];
+      if (!url || !target) return 'Usage: workspace-download <url> <filename>';
+      const destPath = resolveWorkspacePath(target, COMMON_DIR);
+      try {
+        const response = await fetch(url);
+        if (!response.ok) return `Download failed: HTTP ${response.status} ${response.statusText}`;
+        const buffer = await response.arrayBuffer();
+        fs.mkdirSync(path.dirname(destPath), { recursive: true });
+        fs.writeFileSync(destPath, Buffer.from(buffer));
+        return `Downloaded ${buffer.byteLength} bytes from ${url} to ${destPath}`;
+      } catch (err) {
+        return `Failed to download ${url}: ${err instanceof Error ? err.message : String(err)}`;
+      }
+    }
   } catch (err) {
     return `Workspace command failed: ${err instanceof Error ? err.message : String(err)}`;
   }
@@ -730,7 +768,7 @@ async function runToolCommand(command: string): Promise<string> {
   if (executable === 'github') {
     return runGithubPseudoCommand(args);
   }
-  if (executable === 'touch' || executable === 'workspace-list' || executable === 'workspace-read' || executable === 'workspace-write' || executable === 'workspace-delete' || executable === 'workspace-rename') {
+  if (executable === 'touch' || executable === 'workspace-list' || executable === 'workspace-read' || executable === 'workspace-write' || executable === 'workspace-delete' || executable === 'workspace-rename' || executable === 'workspace-mkdir' || executable === 'workspace-copy' || executable === 'workspace-download') {
     return runWorkspaceCommand(executable, args);
   }
   return `Skipped unsupported command: ${command}`;
