@@ -38,11 +38,11 @@ pkill -f "bot-bridge.sh" 2>/dev/null || true
 sleep 1
 
 echo "Starting Andy..."
-nohup bash -c "cd '$SCRIPT_DIR/andy/andy' && exec node dist/index.js" >> "$LOG_DIR/andy.log" 2>&1 &
+nohup bash -c "cd '$SCRIPT_DIR/andy' && exec node dist/index.js" >> "$LOG_DIR/andy.log" 2>&1 &
 ANDY_PID=$!
 
 echo "Starting Bob..."
-nohup bash -c "cd '$SCRIPT_DIR/bob/bob' && exec node dist/index.js" >> "$LOG_DIR/bob.log" 2>&1 &
+nohup bash -c "cd '$SCRIPT_DIR/bob' && exec node dist/index.js" >> "$LOG_DIR/bob.log" 2>&1 &
 BOB_PID=$!
 
 echo "Starting bot-bridge..."
