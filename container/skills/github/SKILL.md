@@ -13,12 +13,18 @@ Use this skill when the user asks to check repository state, inspect remotes, co
 ```bash
 github status
 github whoami
+git clone <repository_url>
 git status --short --branch
 git remote -v
 git diff
 git log --oneline -5
 git add <files>
 git commit -m "message"
+git checkout <branch>
+git stash
+git merge <branch>
+git rebase <branch>
+git revert <commit_hash>
 github push
 github push <branch>
 ```

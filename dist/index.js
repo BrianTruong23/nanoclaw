@@ -145,6 +145,28 @@ export function getAvailableGroups() {
 export function _setRegisteredGroups(groups) {
     registeredGroups = groups;
 }
+function enforceSecondaryCheckerRole(prompt) {
+    if (ASSISTANT_NAME.toLowerCase() !== 'bob')
+        return prompt;
+    if (!WAIT_FOR_BOT_RESPONSE)
+        return prompt;
+    if (!prompt.includes('sender="Andy (other bot)"'))
+        return prompt;
+    return [
+        '<secondary_checker_instruction>',
+        'You are Bob acting after Andy in the User -> Andy -> Bob sequence.',
+        'Your job for this turn is to verify Andy, not duplicate Andy.',
+        'If Andy claims a shared file was created or updated, you MUST first run `workspace-read <path>` or `workspace-list /workspace/common` to inspect the actual file.',
+        'After the tool result, compare the real file with the user request and Andy claim.',
+        'If it matches, give a short verification only. Do not say you created the file.',
+        'For .txt/.md files, readable formatting is part of verification: if the user asked for multiple sentences, steps, bullets, or sections and the file is one long line, treat that as a formatting problem.',
+        'Only use `workspace-write` if the file is missing, incorrect, too shallow for the user request, badly formatted for the request, or contains literal prompt text.',
+        'Do not ask whether to proceed when verification shows a clear fix is needed.',
+        '</secondary_checker_instruction>',
+        '',
+        prompt,
+    ].join('\n');
+}
 /**
  * Process all pending messages for a group.
  * Called by the GroupQueue when it's this group's turn.
@@ -207,7 +229,7 @@ async function processGroupMessages(chatJid) {
         if (!hasTrigger)
             return true;
     }
-    const prompt = formatMessages(missedMessages, TIMEZONE);
+    const prompt = enforceSecondaryCheckerRole(formatMessages(missedMessages, TIMEZONE));
     // Advance cursor so the piping path in startMessageLoop won't re-fetch
     // these messages. Save the old cursor so we can roll back on error.
     const previousCursor = lastAgentTimestamp[chatJid] || '';
@@ -429,7 +451,7 @@ async function startMessageLoop() {
                     // context that accumulated between triggers is included.
                     const allPending = getMessagesSince(chatJid, getOrRecoverCursor(chatJid), ASSISTANT_NAME, MAX_MESSAGES_PER_PROMPT);
                     const messagesToSend = allPending.length > 0 ? allPending : groupMessages;
-                    const formatted = formatMessages(messagesToSend, TIMEZONE);
+                    const formatted = enforceSecondaryCheckerRole(formatMessages(messagesToSend, TIMEZONE));
                     if (queue.sendMessage(chatJid, formatted)) {
                         logger.debug({ chatJid, count: messagesToSend.length }, 'Piped messages to active container');
                         lastAgentTimestamp[chatJid] =
